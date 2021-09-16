@@ -54,14 +54,14 @@ const App = () => {
   return (
     <TouchableWithoutFeedback onPress={() => cerrarTeclado()}>
       <View style={styles.contenedor}>
-        <Text style={styles.titulo}>Administrador de Citas</Text>
+        <Text style={styles.titulo}>Administrador de Reservaciones</Text>
 
         <View>
           <TouchableHighlight onPress={ () => mostrarFormulario()}
           style={styles.btnMostrarForm}>
           <Text
           style={styles.textoMostrarForm}>
-          {mostrarform ? 'Cancelar Crear Cita' : 'Crear Nueva Cita'}
+          {mostrarform ? 'Cancelar reservación' : 'Crear nueva reservación'}
           </Text>
           </TouchableHighlight>
         </View>
@@ -69,7 +69,7 @@ const App = () => {
         <View style={styles.contenido}>
           {mostrarform ? (
             <>
-            <Text style={styles.titulo}>Crear Nueva Cita </Text>
+            <Text style={styles.titulo}>Crear Nueva Reservación </Text>
             <Formulario
             citas={citas}
             setCitas={setCitas}
@@ -79,8 +79,8 @@ const App = () => {
             </>
           ) : (
             <>
-            <Text style={styles.titulo}>{citas.length > 0 ? 'Administra tus citas' :
-            'No hay citas, agrega una'}</Text>
+            <Text style={styles.titulo}>{citas.length > 0 ? 'Administra tus reservas' :
+            'No hay reservas, agrega una'}</Text>
             <FlatList
             style={styles.listado}
             data={citas}
@@ -98,6 +98,7 @@ const App = () => {
 };
 const styles = StyleSheet.create({
   contenedor: {
+    marginTop:20,
     backgroundColor: Colors.PRIMARY_COLOR,
     flex: 1,
   },

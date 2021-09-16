@@ -12,16 +12,16 @@ const Cita = ({ item, eliminarPaciente }) => {
   <ScrollView>
     <View style={styles.cita}>
      <View>
-        <Text style={styles.label}>Paciente:</Text>
+        <Text style={styles.label}>Cliente:</Text>
         <Text style={styles.texto}>{item.paciente}</Text>
       </View>
       <View>
-        <Text style={styles.label}>Propietario:</Text>
-        <Text style={styles.texto}>{item.propietario}</Text>
+        <Text style={styles.label}>Mesa para:</Text>
+        <Text style={styles.texto}>{item.telefono} personas</Text>
       </View>
       <View>
-        <Text style={styles.label}>Síntomas:</Text>
-        <Text style={styles.texto}>{item.sintomas}</Text>
+        <Text style={styles.label}>Tipo de sección:</Text>
+        <Text style={styles.texto}>{item.seccion}</Text>
       </View>
       <View>
         <Text style={styles.label}>Fecha:</Text>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     },
     btnEliminar:{
         padding:10,
-        backgroundColor:'red',
+        backgroundColor:'#82E0AA',
         marginVertical:10
     },
     textoEliminar:{
