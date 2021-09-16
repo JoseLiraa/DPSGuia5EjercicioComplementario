@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View, TouchableHighlight } from "react-native";
+import { Text, StyleSheet, View, TouchableHighlight, ScrollView } from "react-native";
 
 const Cita = ({ item, eliminarPaciente }) => {
 
@@ -9,6 +9,7 @@ const Cita = ({ item, eliminarPaciente }) => {
   }
 
  return (
+  <ScrollView>
     <View style={styles.cita}>
      <View>
         <Text style={styles.label}>Paciente:</Text>
@@ -39,6 +40,7 @@ const Cita = ({ item, eliminarPaciente }) => {
         </TouchableHighlight>
       </View>
     </View>
+    </ScrollView>
   )
 }
 const styles = StyleSheet.create({
